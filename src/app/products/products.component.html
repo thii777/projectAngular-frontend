@@ -1,0 +1,17 @@
+<p>Skate Store</p>
+
+<div class="main">
+    <div *ngFor="let p of products" class="box">
+        <p>{{p.image}}</p>
+        <p>Product {{p.name}}</p>
+        <p>Brand {{p.brand}}</p>
+        <p>Color {{p.color}}</p>
+        <p>Size {{p.size}}</p>
+        <p>Price: R$ {{p.price}}</p>
+        <div class="button">
+            <button>Buy now</button>
+        </div>
+    </div>    
+</div>
+
+
