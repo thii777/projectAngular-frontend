@@ -6,6 +6,9 @@ import { ProductsService } from '../services/products.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
+
+
+
 export class ProductsComponent implements OnInit {
 
   products: Array<any>;

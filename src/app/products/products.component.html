@@ -1,13 +1,30 @@
-<p>Skate Store</p>
+<div class="header">
+    <img src="../../assets//thrasher.jpg" alt="">
+    <div class="login">
+        <a href=""><h1>Skate Store</h1></a>
+        <i class="fas fa-user"></i>
+    </div>
+</div>
+
+<div class="navbar">
+    <ul>
+        <li>Shoes</li>
+        <li>Tshirts</li>
+        <li>Shorts</li>
+        <li>Pants</li>
+        <li>Hats</li>
+        <li>Watchs</li>
+    </ul>
+</div>
 
 <div class="main">
     <div *ngFor="let p of products" class="box">
-        <p>{{p.image}}</p>
-        <p>Product {{p.name}}</p>
-        <p>Brand {{p.brand}}</p>
-        <p>Color {{p.color}}</p>
-        <p>Size {{p.size}}</p>
-        <p>Price: R$ {{p.price}}</p>
+        <img src={{p.image_url}} alt="">
+        <strong>Product {{p.name}}</strong>
+        <p class="brand">{{p.brand}}</p>
+        <p class="color">{{p.color}}</p>
+        <p class="size">Size {{p.size}}</p>
+        <p class="price">R$ {{p.price}}</p>
         <div class="button">
             <button>Buy now</button>
         </div>
