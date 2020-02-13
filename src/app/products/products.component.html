@@ -1,11 +1,15 @@
 <div class="header">
     <img src="../../assets//thrasher.jpg" alt="">
-    <div class="login">
-        <a href=""><h1>Skate Store</h1></a>
-        <i class="fas fa-user"></i>
+    <div class="login" ngFor="let admin of products">
+        <p>Admin</p>
+        <a routerLink="/admin">
+            <fa-icon class="iconAdmin" [icon]="faUser"></fa-icon>
+        </a>
+        <!-- <a routerLink="/admin" (click)="gotoAdmin()">
+            <fa-icon class="iconAdmin" [icon]="faUser"></fa-icon>
+        </a> -->
     </div>
 </div>
-
 <div class="navbar">
     <ul>
         <li>Shoes</li>
@@ -16,7 +20,6 @@
         <li>Watchs</li>
     </ul>
 </div>
-
 <div class="main">
     <div *ngFor="let p of products" class="box">
         <img src={{p.image_url}} alt="">

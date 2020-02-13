@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffffff;
+    width: 100%;
+
+    img {
+        max-width: 200px;
+        margin-bottom: 70px;
+    }
+
+    button {
+        height: 40px;
+        width: 400px;
+        margin-top: 10px;
+        border: none;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 1px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .create {
+        background: rgba(0, 128, 0, 0.911);
+    }
+    .update {
+        background: rgb(179, 255, 0);
+    }
+    .delete {
+        background: rgba(255, 0, 0, 0.911);
+    }
+}
