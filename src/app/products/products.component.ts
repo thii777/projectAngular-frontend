@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import {Router} from "@angular/router";
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { ProductsService } from '../services/products.service';
 
@@ -16,13 +15,8 @@ export class ProductsComponent implements OnInit {
 
   constructor( private productService: ProductsService ) { }
 
-  // async gotoAdmin() {
-  //   this.router.navigate(["admin"])
-  // }
-
   ngOnInit(): void {
     this.list()
-
   }
 
   list(){
