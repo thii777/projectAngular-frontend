@@ -18,7 +18,9 @@ export class ProductsService {
 
   post(selectedForm): Observable<any> {
     const formData = new FormData()
-    return this.http.post(`${this.API}`, formData, selectedForm )
+    formData.append('filename', selectedForm)
+    
+    return this.http.post<any>(`${this.API}`, formData )
   }
 
   put(id): Observable<any> {

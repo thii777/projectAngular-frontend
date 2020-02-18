@@ -14,25 +14,23 @@ import { ProductsService } from '../services/products.service'
 
 export class CreateComponent implements OnInit {
 
-  selectedForm = null;
-
   constructor(private router: Router, private productService: ProductsService ) { }
 
-  product: any;
+  selectedForm: Array<any>;
 
   ngOnInit(): void {
     this.onSubmit()
+    console.log()
   }  
   
   dataForm(event){
-    // this.selectedForm = event.target.value;
-    console.log(event)
+    this.selectedForm = event.target.value[0];
   }
 
-  onSubmit(){ 
-    this.productService.post(this.selectedForm).subscribe(
-    (res) => console.log(res),
-    (err) => console.log(err))
-   
+  async onSubmit(){ 
+    await this.productService.post(this.selectedForm).subscribe(
+      (res) => console.log(res),
+      (err) => console.log(err)
+    )
   }
 }
