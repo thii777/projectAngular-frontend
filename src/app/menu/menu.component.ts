@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faPlus, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -9,6 +10,9 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+
+  faPlus = faPlus
+  faArrowLeft = faArrowLeft
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

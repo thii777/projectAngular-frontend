@@ -3,87 +3,76 @@ div {
     margin: 0;
 }
 
-.container {
+form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: green;
+}
 
-    input {
-        height: 40px;
-        width: 400px;
-        margin-top: 10px;
-        border: none;
+input {
+    height: 40px;
+    width: 400px;
+    margin-top: 10px;
+    border: solid 1px #d6d6d6;
+    color: #00000098;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 3px;
+}
+
+.name {
+    padding-left: 15px;
+
+    ::placeholder {
         color: #00000098;
-        font-weight: 700;
-        letter-spacing: 1px;
-        border-radius: 3px;
-    }
-
-    input.image {
-        height: 250px;
-        width: 250px;
-        background: #ffffff;
-        ::placeholder {
-            color: #00000098;
-            
-        }
-    }
-
-    .name {
-        padding-left: 15px;
-
-        ::placeholder {
-            color: #00000098;
-            
-        }
-    }
-    .brand {
-        padding-left: 15px;
         
-        ::placeholder {
-            color: #00000098;
-            
-        }
     }
-    .color{
-        padding-left: 15px;
+}
+.brand {
+    padding-left: 15px;
+    
+    ::placeholder {
+        color: #00000098;
         
-        ::placeholder {
-            color: #00000098;
-            
-        }
     }
-    .size {
-        padding-left: 15px;
+}
+.color{
+    padding-left: 15px;
+    
+    ::placeholder {
+        color: #00000098;
         
-        ::placeholder {
-            color: #00000098;
-            
-        }
     }
-    .price {
-        padding-left: 15px;
+}
+.size {
+    padding-left: 15px;
+    
+    ::placeholder {
+        color: #00000098;
         
-        ::placeholder {
-            color: #00000098;
-            
-        }
     }
+}
+.price {
+    padding-left: 15px;
+    
+    ::placeholder {
+        color: #00000098;
+        
+    }
+}
 
-    button {
-        background: #CE3817;
-        height: 40px;
-        width: 415px;
-        border: none;
-        border-radius: 3px;
-        box-shadow: 0px 1px 4px 1px #6d5050;
-        color: #ffffff;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 5px;       
-    }
+button {
+    background: #CE3817;
+    height: 40px;
+    width: 415px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 1px 4px 1px #6d5050;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;       
 }

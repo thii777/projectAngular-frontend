@@ -1,9 +1,12 @@
-<div class="container">
-    <input class="image" type="file">
-    <input class="name" placeholder="product name" type="text">
-    <input class="brand" placeholder="brand" type="text">
-    <input class="color" placeholder="color" type="text">
-    <input class="size" placeholder="size" type="text">
-    <input class="price" placeholder="price" type="text">
-    <button>Send</button>
+<div>
+    <form (change)="dataForm($event)">
+        <input class="image" type="file" name="image">
+        <input class="name" placeholder="product name" type="text" name="name">
+        <input class="color" placeholder="brand" type="text" name="brand">
+        <input class="color" placeholder="color" type="text" name="color">
+        <input class="size" placeholder="size" type="text" name="size">
+        <input class="price" placeholder="price" type="text" name="price">
+        <button type="submit" (click)="onSubmit()">Send</button>   
+    </form>
 </div>
+ 

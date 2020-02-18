@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
+import { Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
+import { NgForm} from '@angular/forms';
 import { ProductsService } from '../services/products.service'
 
 @Component({
@@ -6,18 +11,28 @@ import { ProductsService } from '../services/products.service'
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss']
 })
+
 export class CreateComponent implements OnInit {
 
-  constructor(private productService: ProductsService) { }
+  selectedForm = null;
 
-  products: Array<any>;
+  constructor(private router: Router, private productService: ProductsService ) { }
+
+  product: any;
 
   ngOnInit(): void {
-    // this.create
+    this.onSubmit()
+  }  
+  
+  dataForm(event){
+    // this.selectedForm = event.target.value;
+    console.log(event)
   }
 
-  // create(){
-  //   this.productService.create().subscribe(data => this.products = data)
-  // }
-
+  onSubmit(){ 
+    this.productService.post(this.selectedForm).subscribe(
+    (res) => console.log(res),
+    (err) => console.log(err))
+   
+  }
 }

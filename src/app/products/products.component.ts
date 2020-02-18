@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { ProductsService } from '../services/products.service';
 
 @Component({
@@ -12,15 +12,17 @@ export class ProductsComponent implements OnInit {
 
   products: Array<any>;
   faUser = faUser;
+  faEdit = faEdit;
+  faTrash = faTrash;
 
   constructor( private productService: ProductsService ) { }
 
   ngOnInit(): void {
-    this.list()
+    this.getAll()
   }
 
-  list(){
-    this.productService.list().subscribe(data => this.products = data)
+  getAll(){
+    this.productService.getAll().subscribe(data => this.products = data)
   }
 }
 

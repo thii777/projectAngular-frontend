@@ -1,16 +1,12 @@
-<div class="header">
-    <div class="login" ngFor="let admin of products">
-    </div>
-</div>
 <div class="main">
     <div *ngFor="let p of products" class="box">
         <img src={{p.image_url}} alt="">
         <div>
-            <button type="button" class="edit"  routerLink="/edit" routerLinkActive="active">edit</button>
-            <button class="delete">delete</button>
+            <button type="button" class="edit"  routerLink="/edit" routerLinkActive="active"><fa-icon class="iconAdmin" [icon]="faEdit"></fa-icon></button>
+            <button class="delete"><fa-icon class="iconAdmin" [icon]="faTrash"></fa-icon></button>
+            <!-- <button class="delete"  (click)="delete(product)"><fa-icon class="iconAdmin" [icon]="faTrash"></fa-icon></button> -->
         </div>
         <strong>Product {{p.name}}</strong>
-        <p class="brand">{{p.brand}}</p>
         <p class="color">{{p.color}}</p>
         <p class="size">Size {{p.size}}</p>
         <p class="price">R$ {{p.price}}</p>
