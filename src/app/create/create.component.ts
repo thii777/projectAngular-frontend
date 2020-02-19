@@ -20,15 +20,15 @@ export class CreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.onSubmit()
-    console.log()
   }  
   
   dataForm(event){
-    this.selectedForm = event.target.value[0];
+    this.selectedForm = event.target.value;
   }
 
   async onSubmit(){ 
-    await this.productService.post(this.selectedForm).subscribe(
+    const dataF = this.selectedForm
+    await this.productService.post(dataF).subscribe(
       (res) => console.log(res),
       (err) => console.log(err)
     )

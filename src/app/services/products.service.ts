@@ -18,13 +18,14 @@ export class ProductsService {
 
   post(selectedForm): Observable<any> {
     const formData = new FormData()
-    formData.append('filename', selectedForm)
+    formData.append('file', selectedForm)
     
-    return this.http.post<any>(`${this.API}`, formData )
+    return this.http.post<any[]>(`${this.API}`, formData )
   }
 
   put(id): Observable<any> {
-    return this.http.put(`${this.API}/${id}`, new FormData)
+    const formData = new FormData()
+    return this.http.put(`${this.API}/${id}`, formData)
   }
 
   delete(id): Observable<any> {
